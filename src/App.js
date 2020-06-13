@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './Form';
+const teams = [{label: 'junior', value: 3}, {label: 'santa Marta', value: 4}];
+const players = [{value: 2, label: 'valenciano' , teamid: 3}, {value: 6, label: 'Pibe', teamid: 4}];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2 data-testid="Title">Title</h2>
+      <p data-testid="intro-message">Lorem ipsum</p>
+      <Form teams={teams} players={players}/>
     </div>
   );
 }
